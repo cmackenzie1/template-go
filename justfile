@@ -9,6 +9,12 @@ fmt:
 build:
     go build -trimpath -o bin/{{name}} ./cmd/{{name}}
 
+lint:
+    golangci-lint run
+
+run:
+    go run ./cmd/{{name}}
+
 test:
     go test -race ./...
 
